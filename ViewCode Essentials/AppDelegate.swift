@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ViewCode Essentials
-//
-//  Created by HP on 19/05/22.
-//
-
 import UIKit
 
 @main
