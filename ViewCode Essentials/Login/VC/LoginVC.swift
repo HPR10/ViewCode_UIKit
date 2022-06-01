@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
     
     var loginScreen: LoginScreen?
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: LoginScreenDelegate {
+extension LoginVC: LoginScreenDelegate {
     
     func actionLogginButton() {
         print("Deu certo Login!!!")
@@ -28,11 +28,13 @@ extension ViewController: LoginScreenDelegate {
 
     func actionRegisterButton() {
         print("Deu certo Register")
+        let vc: RegisterVC = RegisterVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 
-extension ViewController: UITextFieldDelegate {
+extension LoginVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing")
     }
