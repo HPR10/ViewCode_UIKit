@@ -1,6 +1,17 @@
 import UIKit
 
+protocol LoginScreenDelegate: AnyObject {
+    func actionLogginButton()
+    func actionRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+    weak var delegate: LoginScreenDelegate?
+    
+    func delegate(delegate: LoginScreenDelegate) {
+        self.delegate = delegate
+    }
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -54,6 +65,7 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.tappedloginButton), for: .touchUpInside)
         return button
     }()
     
@@ -63,6 +75,7 @@ class LoginScreen: UIView {
         button.setTitle("Não tem conta, Cadastre-se", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -94,6 +107,14 @@ class LoginScreen: UIView {
     public func configTextFieldDelegate(delegate: UITextFieldDelegate){
         self.emailTextfield.delegate = delegate
         self.passwordTextfield.delegate = delegate
+    }
+    
+    @objc private func tappedloginButton() {
+        self.delegate?.actionLogginButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
     }
     
     private func setupConstraints() {
