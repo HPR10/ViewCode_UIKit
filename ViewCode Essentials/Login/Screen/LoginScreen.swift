@@ -38,7 +38,7 @@ class LoginScreen: UIView {
         textField.backgroundColor = .white
         textField.borderStyle = .roundedRect
         textField.keyboardType = .emailAddress
-        textField.placeholder = "Digite seu e-mai"
+        textField.placeholder = "Digite seu e-mail  "
         textField.textColor = .darkGray
         return textField
     }()
@@ -148,7 +148,4 @@ class LoginScreen: UIView {
             self.registerButton.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor)
         ])
     }
-    
-
-
 }

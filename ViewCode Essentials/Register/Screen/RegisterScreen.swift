@@ -17,11 +17,55 @@ class RegisterScreen: UIView {
         return img
     }()
     
+    lazy var emailTextfield: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.backgroundColor = . white
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.placeholder = "Digite seu e-mail"
+        tf.font = UIFont.systemFont(ofSize: 14)
+        tf.textColor = .darkGray
+        return tf
+    }()
+    
+    lazy var PasswordTextfield: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.backgroundColor = . white
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.placeholder = "Digite sua senha"
+        tf.isSecureTextEntry = true
+        tf.font = UIFont.systemFont(ofSize: 14)
+        tf.textColor = .darkGray
+        return tf
+    }()
+    
+    lazy var registerButton: UIButton = {
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Cadastrar", for: .normal)
+        bt.setTitleColor(.white, for: .normal)
+        bt.clipsToBounds = true
+        bt.layer.cornerRadius = 7.5
+        bt.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        return bt
+    }()
+
+
+
     // MARK: - Setup / Layout
     
     private func configSuperView() {
         self.addSubview(self.btBack)
         self.addSubview(self.imgLogo)
+        self.addSubview(self.emailTextfield)
+        self.addSubview(self.PasswordTextfield)
+        self.addSubview(self.registerButton)
+        
     }
     
     private func setupConstraints() {
@@ -33,7 +77,22 @@ class RegisterScreen: UIView {
             self.imgLogo.heightAnchor.constraint(equalToConstant: 150),
             
             self.btBack.topAnchor.constraint(equalTo: self.imgLogo.topAnchor),
-            self.btBack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5)
+            self.btBack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            
+            self.emailTextfield.topAnchor.constraint(equalTo: self.imgLogo.bottomAnchor, constant: 20),
+            self.emailTextfield.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.emailTextfield.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.emailTextfield.heightAnchor.constraint(equalToConstant: 45),
+            
+            self.PasswordTextfield.topAnchor.constraint(equalTo: self.emailTextfield.bottomAnchor, constant: 15),
+            self.PasswordTextfield.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.PasswordTextfield.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.PasswordTextfield.heightAnchor.constraint(equalToConstant: 45),
+            
+            self.registerButton.topAnchor.constraint(equalTo: self.PasswordTextfield.bottomAnchor, constant: 20),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.registerButton.heightAnchor.constraint(equalToConstant: 45),
              
         ])
     }
