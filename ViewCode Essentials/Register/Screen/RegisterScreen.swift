@@ -75,6 +75,7 @@ class RegisterScreen: UIView {
         self.setConfigBackgroundColor()
         self.configSuperView()
         self.setupConstraints()
+        self.configButtonEnable(false)
     }
     
     required init?(coder: NSCoder) {
@@ -91,7 +92,46 @@ class RegisterScreen: UIView {
         self.addSubview(self.emailTextfield)
         self.addSubview(self.PasswordTextfield)
         self.addSubview(self.registerButton)
+    }
+    
+    private func setConfigBackgroundColor() {
+        self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
+    }
+    
+    // Escutando alguma atividade nos textFields
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextfield.delegate = delegate
+        self.PasswordTextfield.delegate = delegate
+    }
+    
+    @objc private func tappedBackButton() {
+        self.delegate?.actionBackButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
+    }
+    
+    public func validatextfield() {
+        let email: String = self.emailTextfield.text ?? ""
+        let password: String = self.PasswordTextfield.text ?? ""
         
+        if !email.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        } else {
+            self.configButtonEnable(false)
+        }
+        
+    }
+    
+    private func configButtonEnable(_ enable: Bool){
+        if enable {
+            registerButton.setTitleColor(.white, for: .normal)
+            registerButton.isEnabled = true
+        } else {
+            registerButton.setTitleColor(.lightGray, for: .normal)
+            registerButton.isEnabled = false
+        }
     }
     
     private func setupConstraints() {
@@ -121,24 +161,6 @@ class RegisterScreen: UIView {
             self.registerButton.heightAnchor.constraint(equalToConstant: 45),
              
         ])
-    }
-    
-    private func setConfigBackgroundColor() {
-        self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
-    }
-    
-    // Escutando alguma atividade nos textFields
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.emailTextfield.delegate = delegate
-        self.PasswordTextfield.delegate = delegate
-    }
-    
-    @objc private func tappedBackButton() {
-        self.delegate?.actionBackButton()
-    }
-    
-    @objc private func tappedRegisterButton() {
-        self.delegate?.actionRegisterButton()
     }
 
 }

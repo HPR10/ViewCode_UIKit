@@ -19,6 +19,10 @@ class RegisterVC: UIViewController {
 
 extension RegisterVC: UITextFieldDelegate {
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.registerScreen?.validatextfield()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Abaixa o teclado apertando Return
         return true
