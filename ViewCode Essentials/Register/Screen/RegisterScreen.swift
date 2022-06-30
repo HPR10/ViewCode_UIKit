@@ -1,11 +1,23 @@
 import UIKit
 
+protocol RegisterScreenProtocol: AnyObject {
+    func actionBackButton()
+    func actionRegisterButton()
+}
+
 class RegisterScreen: UIView {
     
+    weak var delegate: RegisterScreenProtocol?
+    
+     func delegate(delegate: RegisterScreenProtocol) {
+        self.delegate = delegate
+    }
+
     lazy var btBack: UIButton = {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setImage(UIImage(named: "back"), for: .normal)
+        bt.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return bt
     }()
     
@@ -52,8 +64,22 @@ class RegisterScreen: UIView {
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 7.5
         bt.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        bt.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return bt
     }()
+    
+    // MARK: - life cycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setConfigBackgroundColor()
+        self.configSuperView()
+        self.setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
 
 
@@ -96,23 +122,23 @@ class RegisterScreen: UIView {
              
         ])
     }
-   
-    
-    // MARK: - life cycle
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setConfigBackgroundColor()
-        self.configSuperView()
-        self.setupConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     private func setConfigBackgroundColor() {
         self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
     }
     
+    // Escutando alguma atividade nos textFields
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextfield.delegate = delegate
+        self.PasswordTextfield.delegate = delegate
+    }
+    
+    @objc private func tappedBackButton() {
+        self.delegate?.actionBackButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
+    }
+
 }

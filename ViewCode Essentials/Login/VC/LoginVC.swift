@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     }
 }
 
-extension LoginVC: LoginScreenDelegate {
+extension LoginVC: LoginScreenProtocol {
     
     func actionLogginButton() {
         print("Deu certo Login!!!")

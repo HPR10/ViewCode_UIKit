@@ -1,15 +1,15 @@
 import UIKit
 
-protocol LoginScreenDelegate: AnyObject {
+protocol LoginScreenProtocol: AnyObject {
     func actionLogginButton()
     func actionRegisterButton()
 }
 
 class LoginScreen: UIView {
     
-    weak var delegate: LoginScreenDelegate?
+    weak var delegate: LoginScreenProtocol?
     
-    func delegate(delegate: LoginScreenDelegate) {
+    func delegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
     
