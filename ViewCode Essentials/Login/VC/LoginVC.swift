@@ -23,7 +23,8 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol {
     
     func actionLogginButton() {
-        print("Deu certo Login!!!")
+        let vc: HomeVC = HomeVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     func actionRegisterButton() {

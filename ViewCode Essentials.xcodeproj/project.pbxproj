@@ -12,6 +12,8 @@
 		E6012293283720D800D4BE11 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6012292283720D800D4BE11 /* LoginVC.swift */; };
 		E6012298283720DA00D4BE11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6012297283720DA00D4BE11 /* Assets.xcassets */; };
 		E601229B283720DA00D4BE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6012299283720DA00D4BE11 /* LaunchScreen.storyboard */; };
+		E63543412875A97E006CC043 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543402875A97E006CC043 /* HomeVC.swift */; };
+		E63543432875AA8D006CC043 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543422875AA8C006CC043 /* HomeScreen.swift */; };
 		E638D6C5283ABDC600490941 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E638D6C4283ABDC600490941 /* LoginScreen.swift */; };
 		E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666D71E2847A2CE0021101C /* RegisterVC.swift */; };
 		E6FC35B82849A50F0004E0C0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */; };
@@ -25,6 +27,8 @@
 		E6012297283720DA00D4BE11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E601229A283720DA00D4BE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E601229C283720DA00D4BE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63543402875A97E006CC043 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E63543422875AA8C006CC043 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E638D6C4283ABDC600490941 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E666D71E2847A2CE0021101C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 		E601228D283720D800D4BE11 /* ViewCode Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				E635433F2875A968006CC043 /* Home */,
 				E666D71B2847A2800021101C /* Register */,
 				E638D6BF283ABD3900490941 /* Login */,
 				E601228E283720D800D4BE11 /* AppDelegate.swift */,
@@ -69,6 +74,15 @@
 				E601229C283720DA00D4BE11 /* Info.plist */,
 			);
 			path = "ViewCode Essentials";
+			sourceTree = "<group>";
+		};
+		E635433F2875A968006CC043 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E63543402875A97E006CC043 /* HomeVC.swift */,
+				E63543422875AA8C006CC043 /* HomeScreen.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		E638D6BF283ABD3900490941 /* Login */ = {
@@ -195,7 +209,9 @@
 				E6012293283720D800D4BE11 /* LoginVC.swift in Sources */,
 				E638D6C5283ABDC600490941 /* LoginScreen.swift in Sources */,
 				E601228F283720D800D4BE11 /* AppDelegate.swift in Sources */,
+				E63543432875AA8D006CC043 /* HomeScreen.swift in Sources */,
 				E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */,
+				E63543412875A97E006CC043 /* HomeVC.swift in Sources */,
 				E6012291283720D800D4BE11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
