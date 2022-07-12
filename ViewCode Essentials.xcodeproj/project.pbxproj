@@ -12,14 +12,16 @@
 		E6012293283720D800D4BE11 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6012292283720D800D4BE11 /* LoginVC.swift */; };
 		E6012298283720DA00D4BE11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6012297283720DA00D4BE11 /* Assets.xcassets */; };
 		E601229B283720DA00D4BE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6012299283720DA00D4BE11 /* LaunchScreen.storyboard */; };
+		E6093D50287C938D0092144D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E6093D4F287C938D0092144D /* SnapKit */; };
 		E60BF54E2877ABA7006D42D4 /* userDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60BF54D2877ABA7006D42D4 /* userDetailview.swift */; };
-		E60BF5512877AE90006D42D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E60BF5502877AE90006D42D4 /* SnapKit */; };
 		E63543412875A97E006CC043 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543402875A97E006CC043 /* HomeVC.swift */; };
 		E63543432875AA8D006CC043 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543422875AA8C006CC043 /* HomeScreen.swift */; };
-		E63543482875B664006CC043 /* userDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543472875B664006CC043 /* userDetailTableViewCell.swift */; };
+		E63543482875B664006CC043 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63543472875B664006CC043 /* UserDetailTableViewCell.swift */; };
 		E635434B2875BD4F006CC043 /* dataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635434A2875BD4F006CC043 /* dataUser.swift */; };
 		E638D6C5283ABDC600490941 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E638D6C4283ABDC600490941 /* LoginScreen.swift */; };
 		E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666D71E2847A2CE0021101C /* RegisterVC.swift */; };
+		E6B0195D287C965200CF5B69 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */; };
+		E6B01960287C972600CF5B69 /* SportTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */; };
 		E6FC35B82849A50F0004E0C0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,10 +36,12 @@
 		E60BF54D2877ABA7006D42D4 /* userDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetailview.swift; sourceTree = "<group>"; };
 		E63543402875A97E006CC043 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		E63543422875AA8C006CC043 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		E63543472875B664006CC043 /* userDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetailTableViewCell.swift; sourceTree = "<group>"; };
+		E63543472875B664006CC043 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		E635434A2875BD4F006CC043 /* dataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataUser.swift; sourceTree = "<group>"; };
 		E638D6C4283ABDC600490941 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E666D71E2847A2CE0021101C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCellScreen.swift; sourceTree = "<group>"; };
 		E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E60BF5512877AE90006D42D4 /* SnapKit in Frameworks */,
+				E6093D50287C938D0092144D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +110,8 @@
 		E63543442875B601006CC043 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E60BF54C2877AB76006D42D4 /* CustonView */,
-				E63543472875B664006CC043 /* userDetailTableViewCell.swift */,
+				E6B0195A287C956E00CF5B69 /* UserDetailTableViewCell */,
+				E6B0195B287C962800CF5B69 /* SportTableViewCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -170,6 +174,32 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		E6B0195A287C956E00CF5B69 /* UserDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E60BF54C2877AB76006D42D4 /* CustonView */,
+				E63543472875B664006CC043 /* UserDetailTableViewCell.swift */,
+			);
+			path = UserDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		E6B0195B287C962800CF5B69 /* SportTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0195E287C96FF00CF5B69 /* CustonView */,
+				E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */,
+			);
+			path = SportTableViewCell;
+			sourceTree = "<group>";
+		};
+		E6B0195E287C96FF00CF5B69 /* CustonView */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */,
+			);
+			path = CustonView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,7 +217,7 @@
 			);
 			name = "ViewCode Essentials";
 			packageProductDependencies = (
-				E60BF5502877AE90006D42D4 /* SnapKit */,
+				E6093D4F287C938D0092144D /* SnapKit */,
 			);
 			productName = "ViewCode Essentials";
 			productReference = E601228B283720D800D4BE11 /* ViewCode Essentials.app */;
@@ -218,7 +248,7 @@
 			);
 			mainGroup = E6012282283720D800D4BE11;
 			packageReferences = (
-				E60BF54F2877AE90006D42D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E6093D4E287C938D0092144D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = E601228C283720D800D4BE11 /* Products */;
 			projectDirPath = "";
@@ -248,14 +278,16 @@
 			files = (
 				E6FC35B82849A50F0004E0C0 /* RegisterScreen.swift in Sources */,
 				E6012293283720D800D4BE11 /* LoginVC.swift in Sources */,
+				E6B0195D287C965200CF5B69 /* SportTableViewCell.swift in Sources */,
 				E638D6C5283ABDC600490941 /* LoginScreen.swift in Sources */,
 				E601228F283720D800D4BE11 /* AppDelegate.swift in Sources */,
 				E60BF54E2877ABA7006D42D4 /* userDetailview.swift in Sources */,
 				E635434B2875BD4F006CC043 /* dataUser.swift in Sources */,
 				E63543432875AA8D006CC043 /* HomeScreen.swift in Sources */,
 				E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */,
-				E63543482875B664006CC043 /* userDetailTableViewCell.swift in Sources */,
+				E63543482875B664006CC043 /* UserDetailTableViewCell.swift in Sources */,
 				E63543412875A97E006CC043 /* HomeVC.swift in Sources */,
+				E6B01960287C972600CF5B69 /* SportTableViewCellScreen.swift in Sources */,
 				E6012291283720D800D4BE11 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,20 +498,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E60BF54F2877AE90006D42D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		E6093D4E287C938D0092144D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = develop;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E60BF5502877AE90006D42D4 /* SnapKit */ = {
+		E6093D4F287C938D0092144D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E60BF54F2877AE90006D42D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = E6093D4E287C938D0092144D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

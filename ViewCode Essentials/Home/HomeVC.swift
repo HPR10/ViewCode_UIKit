@@ -20,10 +20,16 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.data.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 3 {
+            let cell: SportTableViewCell? = tableView.dequeueReusableCell(withIdentifier: SportTableViewCell.identifier, for: indexPath) as? SportTableViewCell
+            return cell ?? UITableViewCell()
+        }
+        
         let cell: userDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: userDetailTableViewCell.identifier, for: indexPath) as? userDetailTableViewCell
         cell?.setupCell(data: self.data[indexPath.row])
         return cell ?? UITableViewCell()
