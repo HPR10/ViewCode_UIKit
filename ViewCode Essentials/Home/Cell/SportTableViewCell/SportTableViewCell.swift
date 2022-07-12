@@ -6,6 +6,8 @@ class SportTableViewCell: UITableViewCell {
     // Primeiro coisa para fazer ao criar uma cell ou uma colection
     static let identifier: String = "SportTableViewCell"
     
+    var data: [Sport] = []
+    
     var sportTableViewCellScreen: SportTableViewCellScreen = SportTableViewCellScreen()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -23,6 +25,10 @@ class SportTableViewCell: UITableViewCell {
     func addSubView() {
         self.sportTableViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.sportTableViewCellScreen)
+    }
+    
+    public func dataCollection(data: [Sport]) {
+        self.data = data
     }
     
     func configConstraints() {
@@ -43,12 +49,12 @@ class SportTableViewCell: UITableViewCell {
 
 extension SportTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SportCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: SportCollectionViewCell.identifier, for: indexPath) as? SportCollectionViewCell
-        cell?.setupCell(data: Sport(name: "running", nameImage: "running"))
+        cell?.setupCell(data: self.data[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     
