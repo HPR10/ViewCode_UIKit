@@ -22,6 +22,8 @@
 		E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666D71E2847A2CE0021101C /* RegisterVC.swift */; };
 		E6B0195D287C965200CF5B69 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */; };
 		E6B01960287C972600CF5B69 /* SportTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */; };
+		E6B01963287CFF2300CF5B69 /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01962287CFF2300CF5B69 /* SportCollectionViewCell.swift */; };
+		E6B01965287CFF7C00CF5B69 /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B01964287CFF7C00CF5B69 /* SportCollectionViewCellScreen.swift */; };
 		E6FC35B82849A50F0004E0C0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		E666D71E2847A2CE0021101C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
 		E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCellScreen.swift; sourceTree = "<group>"; };
+		E6B01962287CFF2300CF5B69 /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
+		E6B01964287CFF7C00CF5B69 /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		E6FC35B72849A50F0004E0C0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,7 @@
 		E6B0195B287C962800CF5B69 /* SportTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E6B01961287CFEDA00CF5B69 /* CollectionViewCell */,
 				E6B0195E287C96FF00CF5B69 /* CustonView */,
 				E6B0195C287C965200CF5B69 /* SportTableViewCell.swift */,
 			);
@@ -198,6 +203,23 @@
 				E6B0195F287C972600CF5B69 /* SportTableViewCellScreen.swift */,
 			);
 			path = CustonView;
+			sourceTree = "<group>";
+		};
+		E6B01961287CFEDA00CF5B69 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E6B01966287CFF9B00CF5B69 /* CollectionCustonView */,
+				E6B01962287CFF2300CF5B69 /* SportCollectionViewCell.swift */,
+				E6B01964287CFF7C00CF5B69 /* SportCollectionViewCellScreen.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E6B01966287CFF9B00CF5B69 /* CollectionCustonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCustonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +306,9 @@
 				E60BF54E2877ABA7006D42D4 /* userDetailview.swift in Sources */,
 				E635434B2875BD4F006CC043 /* dataUser.swift in Sources */,
 				E63543432875AA8D006CC043 /* HomeScreen.swift in Sources */,
+				E6B01965287CFF7C00CF5B69 /* SportCollectionViewCellScreen.swift in Sources */,
 				E666D71F2847A2CE0021101C /* RegisterVC.swift in Sources */,
+				E6B01963287CFF2300CF5B69 /* SportCollectionViewCell.swift in Sources */,
 				E63543482875B664006CC043 /* UserDetailTableViewCell.swift in Sources */,
 				E63543412875A97E006CC043 /* HomeVC.swift in Sources */,
 				E6B01960287C972600CF5B69 /* SportTableViewCellScreen.swift in Sources */,
